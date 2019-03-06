@@ -1,2 +1,6 @@
 # troop
-Troop is a decimal base on 62, means that 61 is the biggest one.
+0-9 
+10-35 = a-z (lowercase)
+36-61 = A-Z (uppercase)
+
+Decimal from 0-61, 61 is the biggest digit that symbolized by capital z "Z"
