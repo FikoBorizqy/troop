@@ -1,4 +1,4 @@
-# troop
+# Troop Decimal
 <p>
 0-9<br>
 10-35 = a-z (lowercase)<br>
