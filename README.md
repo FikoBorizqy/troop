@@ -21,7 +21,7 @@ echo \Troop\Troop::fromDec(251195);
 
 * To convert back to decimal, use this method:
 ```
-echo \Troop\Troop::toDec(13lx);
+echo \Troop\Troop::toDec("13lx');
 ```
 
 
