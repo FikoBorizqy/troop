@@ -16,6 +16,6 @@
         "psr-4": {
             "Troop\\": "src/"
         }
-    }
-    "minimum-stability": "beta"
+    },
+    "minimum-stability": "stable"
 }
