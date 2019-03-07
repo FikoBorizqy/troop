@@ -2,14 +2,12 @@
 
 namespace Troop;
 
-use Troop\TroopNonStatic;
-
 class Troop {
 
 	public $number;
 
 	public function __construct() {
-		$this->number = json_decode(file_get_contents(__DIR__ . "/number.json"), true);
+		$this->number = json_decode(file_get_contents(__DIR__ . "/../inc/number.json"), true);
 	}
 
 	public static function fromDec(int $dec) {
