@@ -16,12 +16,12 @@ You can add Troop to your project via composer.
 * To convert from decimal to Troop, use this method:
 
 ```
-echo \Troop\Troop::fromDec(251195);
+echo \Borizqy\Troop\Troop::fromDec(251195);
 ```
 
 * To convert back to decimal, use this method:
 ```
-echo \Troop\Troop::toDec("13lx");
+echo \Borizqy\Troop\Troop::toDec("13lx");
 ```
 
 
