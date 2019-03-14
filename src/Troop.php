@@ -1,6 +1,6 @@
 <?php
 
-namespace Troop;
+namespace Borizqy\Troop;
 
 class Troop {
 
