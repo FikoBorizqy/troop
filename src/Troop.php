@@ -37,7 +37,10 @@ class Troop {
 	 * @param 	Integer		$dec		(required) decimal or integer number
 	 * @return 	String					Troopdecimal result of converting from decimal
 	 */
-	public static function fromDec(int $dec) {
+	public static function fromDec($dec) {
+		// if $dec is not integer, then return false
+		if(!is_int($dec)) return false;
+		// getting troop number
 		$number = (new self)->number;
 		// return strval($dec);
 		do {
@@ -61,9 +64,11 @@ class Troop {
 	 * @return 	Integer					Decimal result of Troop
 	 */
 	public static function toDec(String $tro) {
+		// getting troop number
 		$number = (new self)->number;
 		$number_flip = array_flip($number);
 		for($i=0; $i<strlen($tro); $i++) {
+			if(!isset($number_flip[$tro[$i]])) return false;
 			$j = (isset($j)? $j: strlen($tro)) - 1;
 			$dec = (isset($dec)? $dec: 0) + ($number_flip[$tro[$i]] * pow(62, strlen($tro)-1-$i));
 		}
