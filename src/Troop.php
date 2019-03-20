@@ -1,22 +1,54 @@
 <?php
 
+/**
+ * Troop Decimal
+ * 
+ * If you know Octa Decimal base on 8, hexa decimal base on 16,
+ * Troop is a numeral base on 62. For example number of 35 will be
+ * changed to z(lowecase).
+ * 
+ * 0-9: stay these number
+ * 10-35: a-z (lowercase)
+ * 36-61: A-Z (uppercase)
+ * 
+ * @package Troop Decimal
+ * @author Fiko Borizqy <fiko@dr.com>
+ * @license MIT
+ * @license https://choosealicense.com/licenses/mit/
+ * @see https://github.com/fikoborizqy/troop
+ */
+
 namespace Borizqy\Troop;
 
+/**
+ * Troop Decimal
+ * 
+ * If you know Octa Decimal base on 8, hexa decimal base on 16,
+ * Troop is a numeral base on 62. For example number of 35 will be
+ * changed to z(lowecase).
+ * 
+ * 0-9: stay these number
+ * 10-35: a-z (lowercase)
+ * 36-61: A-Z (uppercase)
+ * 
+ * @access public
+ */
 class Troop {
 
 	/**
-	 * BASE CHARACTER
+	 * Base Character
 	 * 
 	 * all characters saved here, from 0 - Z (capital)
 	 * file is in ../inc/number.json
+	 * 
+	 * @see inc/number.json
 	 */
 	protected $number;
 
 
 
 	/**
-	 * CLASS CONSTRUCTOR
-	 * ====================================
+	 * Construction
 	 * 
 	 * prepare all prerequisites data that Troop needed
 	 * - getting ../int/number.json => base character of 61
@@ -28,8 +60,7 @@ class Troop {
 
 
 	/**
-	 * CONVERT FROM DECIMAL
-	 * ====================================
+	 * Decimal to Troop
 	 * 
 	 * converting data from decimal (integer) number to Troop
 	 * decimal.
@@ -54,8 +85,7 @@ class Troop {
 
 
 	/**
-	 * CONVERT TO DECIMAL
-	 * ====================================
+	 * Troop to Decimal
 	 * 
 	 * converting data from Troop decimal number to decimal
 	 * number (integer).
@@ -72,14 +102,13 @@ class Troop {
 			$j = (isset($j)? $j: strlen($tro)) - 1;
 			$dec = (isset($dec)? $dec: 0) + ($number_flip[$tro[$i]] * pow(62, strlen($tro)-1-$i));
 		}
-		return $dec;
+		return isset($dec)? $dec: null;
 	}
 
 
 
 	/**
-	 * TROOP CHARACTER MAPPING
-	 * ====================================
+	 * Troop Character Mapping
 	 * 
 	 * - get troop character of number from 0-61.
 	 * - get decimal character of troop from 0-Z
